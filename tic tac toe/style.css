@@ -1,0 +1,105 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #97ABB1;
+   text-align: center;
+}
+
+.container {
+   height: 70vh;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.game {
+   height: 60vmin;
+   width: 60vmin;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 1.5vmin;
+}
+
+.box {
+   height: 18vmin;
+   width: 18vmin;
+   border-radius: 20px;
+   border: none;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+   font-size: 8vmin;
+   color: #b0413e;
+}
+
+#reset-btn,
+#new-btn {
+   font-size: 1.25rem;
+   background-color: black;
+   color: #fff;
+   border: none;
+   width: 100px;
+   margin: 10px;
+}
+
+#msg {
+   color: red;
+   font-style: italic;
+   background-color: darkkhaki;
+   font-size: 20px;
+   position: absolute;
+   top: 200px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.msg-container {
+   height: 30vmin;
+}
+
+.hide {
+   display: none;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+   .container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .game {
+       grid-template-columns: repeat(3, 80px);
+   }
+
+   .box {
+       width: 80px;
+       height: 80px;
+       font-size: 18px;
+   }
+
+   #reset-btn, #new-btn {
+       width: 100%;
+       max-width: 200px;
+   }
+}
+
+.congrats-message {
+   text-align: center;
+   padding: 20px;
+}
+
+.giphy-embed {
+   display: block;
+   margin: 0 auto;  /* Centers the GIF */
+   max-width: 100%;
+   height: auto;
+}
+
+.msg-container.hide {
+   display: none;
+}
